@@ -28,5 +28,5 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=dr-Panakhov_python-project-50
-            -Dsonar.organization=dr-Panakhov
+            -Dsonar.organization=dr-panakhov
             -Dsonar.python.coverage.reportPaths=coverage.xml

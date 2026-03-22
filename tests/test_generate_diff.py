@@ -1,3 +1,4 @@
+import json
 import os
 
 import pytest
@@ -35,3 +36,11 @@ def test_plain_format():
     expected = read_file(get_fixture_path('expected_plain.txt')).strip()
     
     assert generate_diff(path1, path2, 'plain').strip() == expected
+
+
+def test_json_format():
+    path1 = get_fixture_path('file1_nested.json')
+    path2 = get_fixture_path('file2_nested.json')
+    result = generate_diff(path1, path2, 'json')
+    
+    assert json.loads(result)

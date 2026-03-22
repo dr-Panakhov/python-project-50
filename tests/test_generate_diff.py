@@ -27,3 +27,11 @@ def test_generate_diff(file1, file2, expected_file):
     expected = read_file(get_fixture_path(expected_file)).strip()
     
     assert generate_diff(path1, path2).strip() == expected
+
+
+def test_plain_format():
+    path1 = get_fixture_path('file1_nested.json')
+    path2 = get_fixture_path('file2_nested.json')
+    expected = read_file(get_fixture_path('expected_plain.txt')).strip()
+    
+    assert generate_diff(path1, path2, 'plain').strip() == expected

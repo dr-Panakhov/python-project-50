@@ -5,4 +5,4 @@
 [![Test Coverage](https://sonarcloud.io/api/project_badges/measure?project=dr-Panakhov_python-project-50&metric=coverage)](https://sonarcloud.io/summary/new_code?id=dr-Panakhov_python-project-50)
 
 ### Demo
-[![asciicast](https://asciinema.org/a/UAUdcS3VpgfBHL4S.svg)](https://asciinema.org/a/UAUdcS3VpgfBHL4S)
+[![asciicast](https://asciinema.org/a/tkaqAhFaBdJDATzo.svg)](https://asciinema.org/a/tkaqAhFaBdJDATzo)

@@ -15,13 +15,15 @@ def read_file(file_path):
         return f.read()
 
 
-@pytest.mark.parametrize("file1, file2", [
-    ('file1.json', 'file2.json'),
-    ('file1.yml', 'file2.yml')
+@pytest.mark.parametrize("file1, file2, expected_file", [
+    ('file1.json', 'file2.json', 'expected.txt'),
+    ('file1.yml', 'file2.yml', 'expected.txt'),
+    ('file1_nested.json', 'file2_nested.json', 'expected_nested.txt'),
+    ('file1_nested.yml', 'file2_nested.yml', 'expected_nested.txt')
 ])
-def test_generate_diff(file1, file2):
+def test_generate_diff(file1, file2, expected_file):
     path1 = get_fixture_path(file1)
     path2 = get_fixture_path(file2)
-    expected = read_file(get_fixture_path('expected.txt')).strip()
+    expected = read_file(get_fixture_path(expected_file)).strip()
     
     assert generate_diff(path1, path2).strip() == expected

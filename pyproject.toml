@@ -18,5 +18,17 @@ packages = ["gendiff"]
 
 [dependency-groups]
 dev = [
+    "pytest>=9.0.2",
+    "pytest-cov>=7.1.0",
     "ruff>=0.15.7",
 ]
+
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[tool.ruff.lint]
+preview = true
+select = ["E", "F", "I", "C90"]
